@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,24 +8,35 @@
 </head>
 
 <body>
-    <h1>loops- tabuadas</h1>
+    <h1>loops - tabuada</h1>
     <script>
 
-    // let n = parseFloat(("digite um número"))
-    let n =5   
+        let n = parseFloat(prompt("digite um número"))
 
-    let contador =0 
+        if (!isNaN(n)) {
+            let contador = 0
 
-    while (contador <=1000) {
-        
-    }
+            // enquanto (contador <= 1000)
+            while (contador <= 1000) {
+                document.write(n + " x " + contador + ":  " + n * contador + "<br>")
+                contador++
+            }
 
-   // while(contador <=1000)
-    //faça isso 
-        document.write(n +"x0:" + n * 0 +"<br>")
-        contador++
+            document.write("saiu do loop")
+        } else {
+            alert("digite apenas número")
+        }
+
+
+
+
+
+
+
+
 
 
     </script>
 </body>
+
 </html>
