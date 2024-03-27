@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <ul>
+    <ul  id="listas pessoas">
         <li>Daniel: Daniel@server</li>
         <li>Maria:  maria@server</li>
         <li>João:   João@server</li>
@@ -15,13 +15,16 @@
 
     <script>
         const pessoa=[
-            {nome:"daniel",email:"daniel@server.com"}
-            {nome:"maria",email:"maria@server.com"}
-            {nome:"joão",email:"joão@server.com"}
-            {nome:"luciane",email:"luciane@server.com"}
-            {nome:"ricardo",email:"ricardo@server.com"}
+            {nome:"daniel",email:"daniel@server.com"},
+            {nome:"maria",email:"maria@server.com"},
+            {nome:"joão",email:"joão@server.com"},
+            {nome:"luciane",email:"luciane@server.com"},
+            {nome:"ricardo",email:"ricardo@server.com"},
         ]
         
+        const listaPessoas = document.getElementsById("listasPessoas")
+
+        listaPessoas.innerHTML += "<li> teste: teste@servidor.com</li>"
 
     </script>
 
