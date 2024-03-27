@@ -1,62 +1,70 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tabelas de produtos</title>
+    <title>Tabela de Produtos</title>
 
     <style>
-        table{
+        table {
             border-collapse: collapse;
         }
 
         table,
         th,
-        td{
+        td {
             border: 1px solid black;
         }
 
         th,
-        td{
+        td {
             padding: 10px;
         }
 
-        th+th,
-        td+td{
+        td+td {
             text-align: right;
         }
-
     </style>
 </head>
+
 <body>
-    <h1>tabelas de produtos</h1>
+    <h1>Tabela de produtos</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Produto</th>
-                <th>Preço</th>
+                <th>produto</th>
+                <th>preço</th>
                 <th>Quantidade em estoque</th>
             </tr>
         </thead>
 
         <tbody id="tabelaProdutos">
-            <tr>
-                <td>caneta</td>
-                <td>R$2.00</td>
-                <td>3</td>
-            </tr>
+
         </tbody>
     </table>
 
     <script>
-        const produtos =[
-           {nome: "caneta",preço:2 ,estoque:3}
-           {nome: "lapís",preço:1.5,estoque:3}
-           {nome: "borracha",preço:0.75 ,estoque:3}
-           {nome: "caderno",preço:2.3,estoque:3}
-           {nome: "régua",preço:4 ,estoque:3}
+        const produtos = [
+            { nome: "caneta", preco: 2, estoque: 3 },
+            { nome: "lapis", preco: 1.5, estoque: 4 },
+            { nome: "borracha", preco: 0.75, estoque: 0 },
+            { nome: "caderno", preco: 2.3, estoque: 1 },
+            { nome: "régua", preco: 4, estoque: 5 }
         ]
+
+        const tabelaProdutos = document.getElementById("tabelaProdutos")
+
+        for (let i = 0; i < produtos.length; i++) {
+            tabelaProdutos.innerHTML += `<tr>
+                <td>${produtos[i].nome}</td>
+                <td>R$ ${produtos[i].preco.toFixed(2)}</td>
+                <td>${produtos[i].estoque}</td>
+            </tr>`
+        }
     </script>
 </body>
+
 </html>
