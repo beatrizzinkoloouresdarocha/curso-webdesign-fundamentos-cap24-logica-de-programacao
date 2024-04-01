@@ -9,22 +9,37 @@
 </head>
 
 <body>
-    <h1>curto-circuito</h1>
+    <h1>Curto-circuito</h1>
 
-    <p>Em Javascript, valores como 0, "", NaN, undefined, null e false são avaliados como false quando convertidos para
-        boolea</p>
-    <p>Todo resto é avaliado como true</p>
 
 
     <script>
 
-        let n
+        let n = 20
 
-        if (n) {
-            console.log("bloco verdade")
-        } else {
-            console.log("bloco mertira")
+        n = n && 10
+
+
+
+        n = n.toString(16)
+        console.log(n, typeof n)
+        n = 10
+
+        n = n.toString(2)
+
+        console.log(n, typeof n)
+
+        function teste(param) {
+            param = param !== undefined ? param : 10
+
+            console.log(param)
         }
+
+        teste()
+        teste(0)
+
+
+
 
 
 
