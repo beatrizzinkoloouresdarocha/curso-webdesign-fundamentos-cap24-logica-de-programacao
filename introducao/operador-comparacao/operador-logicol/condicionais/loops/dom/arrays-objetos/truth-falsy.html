@@ -9,22 +9,25 @@
 </head>
 
 <body>
-    <h1>Fracamento tipado</h1>
+    <h1>truthy vs falsy</h1>
 
-    <p>Em Javascript, variáveis podem armazenar valores de tipos diferentes</p>
+    <p>Em Javascript, valores como 0, "", NaN, undefined, null e false são avaliados como false quando convertidos para
+        boolea</p>
+    <p>Todo resto é avaliado como true</p>
 
 
     <script>
 
+        let n
+
+        if (n) {
+            console.log("bloco verdade")
+        } else {
+            console.log("bloco mertira")
+        }
 
 
-        let n = 10
-        n = false
-        n = "string"
 
-        n = [1, false, "string"]
-
-        console.log(n)
     </script>
 </body>
 
